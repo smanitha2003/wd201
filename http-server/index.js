@@ -1,12 +1,12 @@
   const http = require("http");
 const fs = require("fs");
-
-let homeContent = "";
-let projectContent = "";
-let registContent="";
 const args=process.argv.slice(2);
 const portArg=args.findIndex(arg=> arg==='--port');
 const port=portArg!==-1 ? parseInt(args[portArg+1],10):3000;
+let homeContent = "";
+let projectContent = "";
+let registContent="";
+
 fs.readFile("home.html", (err, home) => {
   if (err) {
     throw err;
