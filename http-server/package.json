@@ -10,7 +10,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "eslint": "^8.47.0",
     "minimist": "^1.2.8"
   }
 }
+
 
