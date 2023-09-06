@@ -6,12 +6,12 @@ const {all,markAsComplete,add,overdue,dueToday,dueLater} = todoList();
 describe("TodoList Test Suite",() =>{
     beforeAll(() =>{
         const today=new Date();
-       const  tomorro = new  Date(new Date().setDate(today.getDate()+1));
+        const tomorrow = new Date(new Date().setDate(today.getDate()+1));
         expect(all.length).toBe(0);
         add(
             {
                 title:"File taxes",
-                dueDate:tomorro.toISOString().slice(0,10),
+                dueDate:tomorrow.toISOString().slice(0,10),
                 completed: false,
             }
         );
@@ -54,11 +54,11 @@ describe("TodoList Test Suite",() =>{
     });
     test("Should retrive due later items", () =>{
         const today=new Date();
-        const tomorro = new Date(new Date().setDate(today.getDate()+1));
+        const tomorrow = new Date(new Date().setDate(today.getDate()+1));
         const duelaterCount=dueLater().length;
         add({
                 title:"Pay electric bill",
-                dueDate:tomorro.toISOString().slice(0,10),
+                dueDate:tomorrow.toISOString().slice(0,10),
                 completed: false,
             });
         expect(dueLater().length).toBe(duelaterCount+1);
