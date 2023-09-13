@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "smanitha",
+    "password": "Smani@2003",
+    "database": "todo-db_dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "smanitha",
+    "password": "Smani@2003",
+    "database": "todo-db_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "smanitha",
+    "password": "Smani@2003",
+    "database": "todo-db_prod",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
